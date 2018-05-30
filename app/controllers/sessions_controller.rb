@@ -25,5 +25,6 @@ class SessionsController < ApplicationController
         
     end
     
+    #authentication needed
     
 end
