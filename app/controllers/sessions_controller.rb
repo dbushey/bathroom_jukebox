@@ -11,19 +11,20 @@ class SessionsController < ApplicationController
     end
     
     def create
-        session[:username] = params[:user][:name]
+        # session[:username] = params[:user][:name]
 
-        if session[:username] == nil  
-            redirect_to login_path
-        else
-            #Ask to Sign Up
-            render 'new'
-        end
+        # if session[:username] == nil  
+        #     redirect_to login_path
+        # else
+        #     #Ask to Sign Up
+        #     render 'new'
+        # end
     end
     
     def destroy 
 
-        session.delete :user
+        # session.delete :user
+        # redirect_to login_path
         
     end
     
