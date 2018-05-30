@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'applicaton#home'
+  root 'session#home'
   get 'login' => 'sessions#new'
   post 'login' => 'sessions#create'
-  post 'destroy' => 'sessions#destroy'
+  post 'logout' => 'sessions#destroy'
   resources :user, only: [:new, :create]
 end
