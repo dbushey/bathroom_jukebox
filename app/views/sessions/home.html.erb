@@ -1,7 +1,7 @@
 <h1>Welcome, <%= @user.username %></h1>
 <%= form_tag tracks_path, method: :get do %>
- <div>
-   <%= text_field_tag(:track_name, nil ,placeholder: "Enter song name", class: "form-control") %>
+ <div class="container" >
+   <%= text_field_tag :track_name, nil ,placeholder: "Enter song name", required: true %><%= submit_tag "Search" %>
  </div>
- <%= submit_tag "Search" %>
+ 
 <% end %>
