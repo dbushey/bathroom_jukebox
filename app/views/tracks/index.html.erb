@@ -3,7 +3,7 @@
 <ul>
   <% @tracks.each do |t| %>
   <li>
-    <%=link_to t.name, track_path(t) %>
+    <%=link_to t.name, track_path(t.id) %>
   </li>
   <% end%>
 </ul>

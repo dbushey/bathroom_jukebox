@@ -1,0 +1,15 @@
+
+
+
+<%= @track.name %> 
+<% if @track.explicit == true %>
+    <%= '(E)' %> 
+<% end %>
+by 
+<% @track.artists.each do |artist| %>
+    <%= artist.name %>
+<% end%><br>
+<%= @track.album.name %>
+
+<%= button_to 'Request Song', root_path %>
+<%= button_to 'Back to Songs', tracks_path, method: 'get' %>
