@@ -3,7 +3,7 @@ class TracksController < ApplicationController
     def index
         # @tracks = Track.all
         # if params[:track_name] == nil
-          @tracks = RSpotify::Track.search('Thriller')
+          @tracks = RSpotify::Track.search(params[:track_name])
         #   redirect_to track_path
         # end
           #error message: song not found
