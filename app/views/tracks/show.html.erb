@@ -3,13 +3,21 @@
 
 <%= @track.name %> 
 <% if @track.explicit == true %>
-    <%= '(E)' %> 
-<% end %>
-by 
+    <button disabled="disabled"><%= 'E' %> </button>
+<% end %> <br>
+Artists:
 <% @track.artists.each do |artist| %>
-    <%= artist.name %>
+    <%= artist.name %>,
 <% end%><br>
-<%= @track.album.name %>
+
+<% if @track.album.name == @track.name %>
+    Single
+<% else %>
+    Album: @track.album.name
+<% end%>
+
 
 <%= button_to 'Request Song', track_path %>
-<%= button_to 'Back to Songs', tracks_path, method: 'get' %>
+
+<!--Doesn't link properly back to the songs searched-->
+<%# button_to 'Back to Songs', tracks_path, method: 'get' %>
