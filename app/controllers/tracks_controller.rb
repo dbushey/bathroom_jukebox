@@ -10,6 +10,7 @@ class TracksController < ApplicationController
 
     def add
         @track = RSpotify::Track.find(params[:id])
+        session[:track] = @track
 
         redirect_to root_path
     end

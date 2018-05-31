@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
             redirect_to login_path
         else
             @user = User.find(get_id)
+            @track = session[:track]
         end
     end
 
