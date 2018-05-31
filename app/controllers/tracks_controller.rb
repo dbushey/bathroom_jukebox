@@ -13,6 +13,13 @@ class TracksController < ApplicationController
 
     def show 
         @track = RSpotify::Track.find(params[:id])
-        # @track = Track.find(params[:id])
+        
     end
+
+    def add
+        @track = RSpotify::Track.find(params[:id])
+
+        redirect_to root_path
+    end
+
 end

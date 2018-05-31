@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
         if session[:user_id] == nil
           redirect_to login_path
         end
-      end
+    end
 
     def new
         
