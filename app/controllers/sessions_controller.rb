@@ -16,21 +16,19 @@ class SessionsController < ApplicationController
         @user = User.find_by(username: params[:username])
 
         if @user == nil
+            ## render page with error
+            ## tell them password/username combination is incorrect
             redirect_to new_user_path
         elsif @user.authenticate(params[:password]) 
             session[:id] = @user.id
             redirect_to root_path
-        else
-            redirect_to new_user_path
-        #     #Ask to Sign Up
-        #     render 'new'
         end
 
     end
     
     def destroy 
 
-        session.destroy
+        session.delete :id
         redirect_to login_path
         
     end
