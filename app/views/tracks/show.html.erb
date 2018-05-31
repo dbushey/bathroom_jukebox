@@ -5,15 +5,13 @@
 <% if @track.explicit == true %>
     <button disabled="disabled"><%= 'E' %> </button>
 <% end %> <br>
-Artists:
-<% @track.artists.each do |artist| %>
-    <%= artist.name %>,
-<% end%><br>
+
+Artists: <%= @track.artists.map {|artist| artist.name}.join(", ") %><br>
 
 <% if @track.album.name == @track.name %>
     Single
 <% else %>
-    Album: @track.album.name
+    Album: <%= @track.album.name %>
 <% end%>
 
 

@@ -3,7 +3,7 @@
 <ul>
   <% @tracks.each do |t| %>
   <li>
-    <%=link_to t.name, track_path(t.id) %>
+    <%=link_to t.name, track_path(t.id) %> by <%= t.artists.first.name %>
   </li>
   <% end%>
 </ul>
