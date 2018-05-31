@@ -1,8 +1,20 @@
-<%= form_tag login_path do %>
-    <%= label_tag 'username' %>
-    <%=  text_field_tag 'username'%>
-    <%= label_tag 'password' %>
-    <%=  password_field_tag 'password'%>
+<div class='container'>
+    <div class="row">
+        <div class="col-md-auto">
+            <%= form_tag login_path do %>
+                <%= label_tag 'username' %>
+                <%=  text_field_tag 'username'%>
+                <%= label_tag 'password' %>
+                <%=  password_field_tag 'password'%>
 
-    <%= submit_tag 'Login' %>
-<% end %>
+                <%= submit_tag 'Login' %>
+            <% end %>
+        </div>
+        <div class="col-auto">
+            OR
+        </div>
+        <div class="col">
+            <%= button_to 'Sign Up', new_user_path, method: :get %>
+        </div>
+    </div>
+</div>
