@@ -30,8 +30,8 @@ class SessionsController < ApplicationController
     
     def destroy 
 
-        # session.delete :user
-        # redirect_to login_path
+        session.destroy
+        redirect_to login_path
         
     end
     
