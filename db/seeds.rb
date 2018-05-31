@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Track.create(name: 'Thriller', artists: 'Michael Jackson', album: 'Greatest Hits Collection', explicit: false)
+Track.create(name: 'Many Men', artists: '50 Cent', album: 'Get Rich or Die Trying', explicit: true)
+Track.create(name: 'Like a Virgin',artists: 'Madonna', album: 'Like a Virgin', explicit: false)
+
+# t.string "name"
+# t.string "artists"
+# t.string "album"
+# t.boolean "explicit"

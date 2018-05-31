@@ -1,16 +1,18 @@
 class TracksController < ApplicationController
-
+    before_action :authenticate_spotify
     def index
-        if !params[:track_name].empty?
-          @tracks = RSpotify::Track.search(params[:track_name])
-          redirect_to track_path
-        end
+        # @tracks = Track.all
+        # if params[:track_name] == nil
+          @tracks = RSpotify::Track.search('Thriller')
+        #   redirect_to track_path
+        # end
           #error message: song not found
           #render page
         # end
     end
 
     def show 
-        @artist = RSpotify::Artist.find(params[:id])
+        @track = RSpotify::Track.find(params[:id])
+        # @track = Track.find(params[:id])
     end
 end
