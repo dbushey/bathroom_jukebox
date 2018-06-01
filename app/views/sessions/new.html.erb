@@ -1,20 +1,23 @@
 <div class='container'>
-    <div class="row">
-        <div class="col-md-auto">
+
+    <img src="/images/bathroom_jukebox_logo.jpg" id="toiletImg" >
+    <div class="row" id="loginContainer">
+        <div class="col-md-auto" id="login">
             <%= form_tag login_path do %>
                 <%= label_tag 'username' %>
                 <%=  text_field_tag 'username'%>
+                <Br/>
                 <%= label_tag 'password' %>
                 <%=  password_field_tag 'password'%>
-
-                <%= submit_tag 'Login' %>
+                <Br/>
+                <%= submit_tag 'Login', class: "submit" %>
             <% end %>
         </div>
-        <div class="col-auto">
+        <div class="col-auto" id="or">
             OR
         </div>
-        <div class="col">
-            <%= button_to 'Sign Up', new_user_path, method: :get %>
+        <div class="col" id="signup">
+            <%= button_to 'Sign Up', new_user_path, method: :get , class: "submit" %>
         </div>
     </div>
 </div>

@@ -32,3 +32,31 @@
      margin: 2%;
      /* background: linear-gradient(grey, blue);  */
  }
+
+ #loginContainer {
+     display: grid;
+     grid-template-rows: 33% 33% 33%;
+     grid-gap:2em;
+     height: 50%;
+     width:60%;
+     margin-left:20%;
+     margin-right:20%;
+ }
+
+ #loginContainer div {
+     text-align: center;
+ }
+
+ #toiletImg {
+     width: 50%;
+     margin-left: 25%;
+     margin-right: 25%;
+ }
+
+.submit {
+     border-radius: 2em
+ }
+
+ .submit:hover {
+     background-color: red;
+ }
