@@ -1,24 +1,21 @@
-# README
+# bathroom_jukebox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## tl;dr
+Proof of concept app allowing visitors to select music to play in WeWork bathrooms
 
-Things you may want to cover:
+## Why?
+To give WeWork bathrooms visitors the ability to choose what plays in the bathroom
 
-* Ruby version
+## Features
++ Log in in the bathroom area
++ Search by song, artist and genre
++ Select a song that will be in queue
 
-* System dependencies
+## Technologies / Frameworks
++ Spotify API for music content
++ Search system to show all possible results related to the search
++ Ruby/Rails to save user information
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
